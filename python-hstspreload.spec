@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-hstspreload
 Version:	2020.12.22
-Release:	1
+Release:	2
 Summary:	Chromium HSTS Preload list as a Python package
 License:	BSD-3
 URL:		https://github.com/sethmlarson/hstspreload
@@ -28,6 +28,7 @@ Provides:	python3-hstspreload-doc
 %description help
 Development documents and examples for hstspreload
 
+%prep
 %autosetup -n hstspreload-2020.12.22
 
 %build
@@ -68,5 +69,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Tue May 17 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn> - 2020.12.22-2
+- fix build issue
+
 * Sun May 23 2021 Python_Bot <Python_Bot@openeuler.org>
 - Package Spec generated
